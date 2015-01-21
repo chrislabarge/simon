@@ -67,7 +67,9 @@ class GamePagesController < ApplicationController
 	end
 	
 	def rihanna
-		party_time
+		new = Colors.new
+		
+		new.party_time
 		redirect_to root_path
 	end
 	
