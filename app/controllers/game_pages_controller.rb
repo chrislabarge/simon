@@ -28,8 +28,8 @@ class GamePagesController < ApplicationController
 	
 	def green
 		
-		#green =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
-		#green.on
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
+		green.on
 		
 		redirect_to root_path
 	
@@ -37,19 +37,33 @@ class GamePagesController < ApplicationController
 	
 	def green_off
 		
-		#green =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
-		#green.off
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
+		green.off
 		redirect_to root_path
 	end
 	
 	def yellow
-		#yellow =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
-		#yellow.on		redirect_to root_path
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)	
+		yellow.on		redirect_to root_path
+		redirect_to root_path
 	end	
 	
 	def yellow_off
-		#yellow =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
-		#yellow.off		redirect_to root_path
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)	
+		yellow.off		redirect_to root_path
+		redirect_to root_path
+	end
+	
+	def blue
+		blue =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
+		blue.on		redirect_to root_path
+		redirect_to root_path
+	end
+	
+	def blue_off
+		blue =  PiPiper::Pin.new(:pin => 17, :direction => :out)	
+		blue.off		redirect_to root_path
+		redirect_to root_path
 	end
 	
 	

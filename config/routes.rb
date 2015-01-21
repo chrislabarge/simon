@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   get 'game_pages/red_off'
   get 'game_pages/green'
   get 'game_pages/green_off'
+	get 'game_pages/yellow'
+  get 'game_pages/yellow_off'
+  get 'game_pages/blue'
+  get 'game_pages/blue_off'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
