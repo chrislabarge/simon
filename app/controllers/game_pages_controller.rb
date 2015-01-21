@@ -10,8 +10,8 @@ class GamePagesController < ApplicationController
 
 	def red
 	 
-	 # red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-	 # red.on
+	  red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+	  red.on
 	 	
 	 redirect_to root_path
 	
@@ -19,8 +19,8 @@ class GamePagesController < ApplicationController
   
   def red_off
 			
-	 # red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-	 # red.off
+	  red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+	  red.off
 	 
 	 redirect_to root_path
 	
