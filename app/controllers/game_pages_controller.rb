@@ -66,5 +66,9 @@ class GamePagesController < ApplicationController
 		redirect_to root_path
 	end
 	
+	def rihanna
+		party_time
+		redirect_to root_path
+	end
 	
 end
