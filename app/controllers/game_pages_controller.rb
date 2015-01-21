@@ -44,25 +44,25 @@ class GamePagesController < ApplicationController
 	
 	def yellow
 		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)	
-		yellow.on		redirect_to root_path
+		yellow.on		
 		redirect_to root_path
 	end	
 	
 	def yellow_off
 		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)	
-		yellow.off		redirect_to root_path
+		yellow.off		
 		redirect_to root_path
 	end
 	
 	def blue
 		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)	
-		blue.on		redirect_to root_path
+		blue.on		
 		redirect_to root_path
 	end
 	
 	def blue_off
 		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)	
-		blue.off		redirect_to root_path
+		blue.off		
 		redirect_to root_path
 	end
 	
