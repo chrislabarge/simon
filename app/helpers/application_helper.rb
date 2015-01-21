@@ -1,15 +1,15 @@
 module ApplicationHelper
  
- class Colors
  
- 		def initialize
+ 
+ 		
  		 @red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		 @green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
 		 @blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
 		 @yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
-	  end
+	  
  		
- 		def circle(one,two,three,four, time)
+ def circle(one,two,three,four, time)
 	one.on
 	sleep time
 	one.off
@@ -46,6 +46,6 @@ def party_time
 	end
 end
  
- end
+ 
 
 end
