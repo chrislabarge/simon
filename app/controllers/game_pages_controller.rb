@@ -2,7 +2,7 @@
 
 class GamePagesController < ApplicationController
   
-  	
+  @red =  PiPiper::Pin.new(:pin => 23, :direction => :out)	
   
   
   
@@ -12,8 +12,8 @@ class GamePagesController < ApplicationController
 
 	def red
 	 
-	  red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-	  red.on
+	  
+	  @red.on
 	 	
 	 redirect_to root_path
 	
