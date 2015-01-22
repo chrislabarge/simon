@@ -1,3 +1,6 @@
+require 'pi_piper'
+include PiPiper
+
 class GamePagesController < ApplicationController
   
   	
