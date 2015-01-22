@@ -17,30 +17,26 @@ class GamePagesController < ApplicationController
 		red_lt =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		
  		
- 		#pattern = [ red, yellow, blue, green] 
+ 		
  	
  	
  for i in pattern do
- 	if i == "red"
-# 		red = PiPiper::Pin.new(:pin => 23, :direction => :out)
-		red_lt.on
+ 	if i == "red" # I think i can make this a hash, so the Pin classes  above would be hashed with the :symbol
+		red_lt.on #this entire if statment within the for-loop could be its own function
 		sleep 1
 		red_lt.off
 	elsif
 		i == "green"
-	#	green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
 		green_lt.on
 		sleep 1
 		green_lt.off
 	elsif
 		i == "blue"
-	#	blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
 		blue_lt.on
 		sleep 1
 		blue_lt.off
 	elsif
 		i == "yellow"		
-   # yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
     yellow_lt.on
     sleep 1
     yellow_lt.off 	
