@@ -5,16 +5,19 @@ class GamePagesController < ApplicationController
   #######################
   
   
-  def simon_says(pattern) 
+  def simon_says#(pattern) 
  
   
 	
 	#pattern.push(array.shuffle[0])
 	
-	
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		
  		
- 		 
+ 		pattern = [ red, yellow, blue, green] 
  	
  	
  for i in pattern do
@@ -57,15 +60,12 @@ end
   
   def test
 		
-		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
-		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
-		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
-		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+		
   	
-  	pattern = [ red, yellow, blue, green]
+  	#pattern = [ red, yellow, blue, green]
   	
   		
-  	simon_says(pattern)
+  	simon_says#(pattern)
   	
   	redirect_to root_path
   end
