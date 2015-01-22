@@ -82,19 +82,19 @@ class GamePagesController < ApplicationController
 		for light in colors do
 			light.on 
 			sleep 0.1
-			light off
+			light.off
 		end
 		
 		for light in colors do
 			light.on 
 			sleep 0.1
-			light off
+			light.off
 		end
 			
 		for light in colors do
 			light.on 
 			sleep 0.1
-			light off
+			light.off
 		end
 
 		redirect_to root_path
