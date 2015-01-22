@@ -5,45 +5,45 @@ class GamePagesController < ApplicationController
   #######################
   
   
-  def simon_says#(pattern) 
+  def simon_says(pattern) 
  
   
 	
 	#pattern.push(array.shuffle[0])
 	
-		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
-		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
-		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
-		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+		green_lt =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		yellow_lt =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		blue_lt =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		red_lt =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		
  		
  		pattern = [ red, yellow, blue, green] 
  	
  	
  for i in pattern do
- 	if i == red
+ 	if i == "red"
 # 		red = PiPiper::Pin.new(:pin => 23, :direction => :out)
-		red.on
+		red_lt.on
 		sleep 1
-		red.off
+		red_lt.off
 	elsif
-		i == green
+		i == "green"
 	#	green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
-		green.on
+		green_lt.on
 		sleep 1
-		green.off
+		green_lt.off
 	elsif
-		i == blue
+		i == "blue"
 	#	blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
-		blue.on
+		blue_lt.on
 		sleep 1
-		blue.off
+		blue_lt.off
 	elsif
-		i == yellow		
+		i == "yellow"		
    # yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
-    yellow.on
+    yellow_lt.on
     sleep 1
-    yellow.off 	
+    yellow_lt.off 	
 	end	
  end
 	
@@ -62,10 +62,10 @@ end
 		
 		
   	
-  	#pattern = [ red, yellow, blue, green]
+  	pattern = [ "red", "yellow", "blue", "green"]
   	
   		
-  	simon_says#(pattern)
+  	simon_says(pattern)
   	
   	redirect_to root_path
   end
