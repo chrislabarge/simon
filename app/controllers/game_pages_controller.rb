@@ -50,7 +50,18 @@ end
   
   
   def test
-  
+  	green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+  	
+  	pattern = [green, yellow, red, blue ]
+  	array = [green, yellow, red, blue ]
+  	
+  		
+  	simon_says(pattern, array)
+  	
+  	redirect_to root_path
   end
   
   
