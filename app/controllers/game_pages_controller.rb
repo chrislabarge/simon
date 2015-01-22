@@ -97,12 +97,13 @@ class GamePagesController < ApplicationController
 			light off
 		end
 
+		redirect_to root_path
 				
 		end
 		
 		
 		
-		redirect_to root_path
+		
 	
 	
 end
