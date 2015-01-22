@@ -2,7 +2,6 @@
 
 class GamePagesController < ApplicationController
   
-  @red =  PiPiper::Pin.new(:pin => 23, :direction => :out)	
   
   
   
@@ -11,7 +10,8 @@ class GamePagesController < ApplicationController
   end
 
 	def red
-	 
+		
+		@red =  PiPiper::Pin.new(:pin => 23, :direction => :out)		 
 	  
 	  @red.on
 	 	
