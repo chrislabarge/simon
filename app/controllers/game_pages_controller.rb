@@ -62,7 +62,7 @@ end
 		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
 		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
   	
-  	pattern = [ red, yellow, blue. green]
+  	pattern = [ red, yellow, blue, green]
   	
   		
   	simon_says(pattern)
