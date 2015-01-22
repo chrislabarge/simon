@@ -114,6 +114,9 @@ class GamePagesController < ApplicationController
 			light.off
 		end
 		
+	
+	#flashy#############################
+	
 		for light in colors do
 			light.on
 		end
@@ -124,6 +127,8 @@ class GamePagesController < ApplicationController
 			light.off
 		end
 		
+		sleep 0.1
+		
 		for light in colors do
 			light.on
 		end
@@ -133,6 +138,8 @@ class GamePagesController < ApplicationController
 		for light in colors do
 			light.off
 		end
+		
+		sleep 0.1
 		
 		for light in colors do
 			light.on
@@ -143,7 +150,42 @@ class GamePagesController < ApplicationController
 		for light in colors do
 			light.off
 		end		
-			
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.on
+		end
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.off
+		end
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.on
+		end
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.off
+		end
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.on
+		end
+		
+		sleep 0.1
+		
+		for light in colors do
+			light.off
+		end		 	
 		
 		redirect_to root_path
 				
