@@ -17,7 +17,7 @@ class GamePagesController < ApplicationController
 		red_lt =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		
  		
- 		pattern = [ red, yellow, blue, green] 
+ 		#pattern = [ red, yellow, blue, green] 
  	
  	
  for i in pattern do
