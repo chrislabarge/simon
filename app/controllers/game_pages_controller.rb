@@ -2,10 +2,51 @@
 
 class GamePagesController < ApplicationController
   
+  #######################
+  
+  
+  def simon_says(pattern, array) 
+ 
+ 
+	pattern.push(array.shuffle[0])
+	
+ 	
+ for i in pattern do
+ 	if i == "red"
+ 		red = PiPiper::Pin.new(:pin => 23, :direction => :out)
+		red.on
+		sleep 1
+		red.off
+	elsif
+		i == "green"
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		green.on
+		sleep 1
+		green.off
+	elsif
+		i == "blue"
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		blue.on
+		sleep 1
+		blue.off
+	elsif
+		i == "yellow"		
+    yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+    yellow.on
+    sleep 1
+    yellow.off 	
+	end	
+ end
+	
+end
   
   
   
   
+  
+  
+  
+  ####################
   
   
   def play
@@ -59,7 +100,11 @@ class GamePagesController < ApplicationController
 		redirect_to root_path
 	end
 	
-	
+	def blue
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)	
+		blue.on		
+		redirect_to root_path
+	end
 	
 	def blue_off
 		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)	
@@ -187,13 +232,7 @@ class GamePagesController < ApplicationController
 				
 		end
 		
-	def blue
-		rihanna
 		
-		#blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)	
-		#blue.on		
-		#redirect_to root_path
-	end		
 		
 		
 	
