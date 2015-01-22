@@ -1,5 +1,4 @@
 
-include PiPiper
 
 class GamePagesController < ApplicationController
   
