@@ -78,6 +78,7 @@ class GamePagesController < ApplicationController
 		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
 		
 		colors = [red, blue, yellow, green]
+		backwords =[ green, yellow, blue, red] #this can just be an array method like [array].reverse
 		
 		for light in colors do
 			light.on 
@@ -96,7 +97,25 @@ class GamePagesController < ApplicationController
 			sleep 0.1
 			light.off
 		end
-
+		
+		for light in backwords do
+			light.on 
+			sleep 0.1
+			light.off
+		end
+		for light in backwords do
+			light.on 
+			sleep 0.1
+			light.off
+		end
+		for light in backwords do
+			light.on 
+			sleep 0.1
+			light.off
+		end
+		
+		
+		
 		redirect_to root_path
 				
 		end
