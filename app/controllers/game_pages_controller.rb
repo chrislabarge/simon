@@ -5,6 +5,9 @@ class GamePagesController < ApplicationController
   
   
   
+  
+  
+  
   def play
   	
   end
@@ -69,9 +72,36 @@ class GamePagesController < ApplicationController
 	end
 	
 	def rihanna
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+		
+		colors = [red, blue, yellow, green]
+		
+		for light in colors do
+			light.on 
+			sleep 0.1
+			light off
+		end
+		
+		for light in colors do
+			light.on 
+			sleep 0.1
+			light off
+		end
+			
+		for light in colors do
+			light.on 
+			sleep 0.1
+			light off
+		end
+
+				
+		end
 		
 		
-		party_time
+		
 		redirect_to root_path
 	end
 	
