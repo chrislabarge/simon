@@ -5,33 +5,42 @@ class GamePagesController < ApplicationController
   #######################
   
   
-  def simon_says(pattern, array) 
+  def simon_says#(pattern, array) 
  
- 
-	pattern.push(array.shuffle[0])
+  
 	
+	#pattern.push(array.shuffle[0])
+	
+	
+		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+ 		
+ 		 pattern = [ red, yellow, green, blue]
+ 	
  	
  for i in pattern do
- 	if i == "red"
- 		red = PiPiper::Pin.new(:pin => 23, :direction => :out)
+ 	if i == red
+# 		red = PiPiper::Pin.new(:pin => 23, :direction => :out)
 		red.on
 		sleep 1
 		red.off
 	elsif
-		i == "green"
-		green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
+		i == green
+	#	green =  PiPiper::Pin.new(:pin => 17, :direction => :out)
 		green.on
 		sleep 1
 		green.off
 	elsif
-		i == "blue"
-		blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
+		i == blue
+	#	blue =  PiPiper::Pin.new(:pin => 16, :direction => :out)
 		blue.on
 		sleep 1
 		blue.off
 	elsif
-		i == "yellow"		
-    yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
+		i == yellow		
+   # yellow =  PiPiper::Pin.new(:pin => 26, :direction => :out)
     yellow.on
     sleep 1
     yellow.off 	
@@ -50,19 +59,20 @@ end
   
   
   def test
-  	red = "red"
+ # 	red = "red"
 
-		green = "green"
+	#	green = "green"
 
-		yellow = "yellow"
+	#	yellow = "yellow"
 
-		blue = "blue"
+	#	blue = "blue"
   	
-  	pattern = [green, yellow, red, blue ]
-  	array = [green, yellow, red, blue ]
+  #	pattern = [green, yellow, red, blue ]
+  
+  #	array = [green, yellow, red, blue ]
   	
   		
-  	simon_says(pattern, array)
+  	simon_says#(pattern, array)
   	
   	redirect_to root_path
   end
