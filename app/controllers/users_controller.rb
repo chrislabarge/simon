@@ -22,27 +22,35 @@ class UsersController < ApplicationController
 	
 	def show
 		@user = User.find(params[:id]) #this is just a short cut
-		@new_color = random_color
 		
-		if @user.turns_left.empty?
-			
-			@user.pattern.push(@new_color) #adds one more to the pattern
-		  @user.turns_left = @user.pattern #sets the empty array back to full pattern
 		
-			@user.save
-		else	
-			nil
-		end
 	end
 
 
 
 	#######################
+	#if empty
+		
+	def empty_turn(user)	
+		if user.turns_left.empty?
+			@new_color = random_color
+			user.pattern.push(@new_color) #adds one more to the pattern
+		  user.turns_left = user.pattern #sets the empty array back to full pattern
+		
+			
+		else	
+			nil
+		end
+	end
 	
+	
+	
+	##################
 	def red
       @user = User.first
 	    if @user.turns_left[0] == "red"
 				@user.turns_left.shift
+				empty_turn(@user)
 				@user.save
 				redirect_to user_path
 			else	
@@ -56,6 +64,7 @@ class UsersController < ApplicationController
 		@user = User.first
 	    if @user.turns_left[0] == "green"
 				@user.turns_left.shift
+				empty_turn(@user)
 				@user.save
 				redirect_to user_path
 			else	
@@ -67,6 +76,7 @@ class UsersController < ApplicationController
 		  @user = User.first
 	    if @user.turns_left[0] == "yellow"
 				@user.turns_left.shift
+				empty_turn(@user)
 				@user.save
 				redirect_to user_path
 			else	
@@ -78,6 +88,7 @@ class UsersController < ApplicationController
 		@user = User.first
 	    if @user.turns_left[0] == "blue"
 				@user.turns_left.shift
+				empty_turn(@user)
 				@user.save
 				redirect_to user_path
 			else	
