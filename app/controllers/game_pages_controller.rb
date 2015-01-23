@@ -6,7 +6,7 @@ class GamePagesController < ApplicationController
 
   
   def home
-  	@user = User.create(pattern:["red"])
+  	
   end
   
   
@@ -18,18 +18,7 @@ class GamePagesController < ApplicationController
   ####################
 
 	
-	def red
-		
-	end
-	
-	def yellow
-	end
-	
-	def green
-	end
-	
-	def blue
-	end
+
 
 
 end
