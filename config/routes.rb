@@ -1,16 +1,9 @@
 Rails.application.routes.draw do
-  root  'game_pages#play'
-	get 'game_pages/test'
-	get 'game_pages/red'
-  get 'game_pages/red_off'
-  get 'game_pages/green'
-  get 'game_pages/green_off'
-	get 'game_pages/yellow'
-  get 'game_pages/yellow_off'
-  get 'game_pages/blue'
-  get 'game_pages/blue_off'
-  get 'game_pages/rihanna'
-  
+  get 'users/new'
+
+  root  'game_pages#home'
+  get 'game_pages/play'
+	resources :users
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
