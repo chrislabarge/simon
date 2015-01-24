@@ -26,6 +26,7 @@ class GamePagesController < ApplicationController
 	end
 	
 	def green
+		poop
 	end
 	
 	def yellow

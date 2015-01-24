@@ -1,16 +1,31 @@
+
 module ApplicationHelper
- 
+
+	#require 'pi_piper'
+	 
  @@pattern = []
+ @@turns_left = []		
 	
  def new_color
  	colors = ["red", "green", "blue", "yellow"]
  	return colors.sample
  end
  
- def heyo
- 		
-		return @@pattern
+ 
+ def set_turns
+ 	@@turns_left = @@pattern
  end
+ 
+ 
+ def pattern
+ 		return @@pattern
+ end
+ 
+	def turns_left
+		return @@turns_left 	
+	end
+	
+ 
  
  def new_pattern
 	@@pattern = ["red"] #eventually it will just be the new_color function 
@@ -19,15 +34,21 @@ module ApplicationHelper
  def add_new_color
  	@@pattern.push(new_color)
  end
+ 
+ def shift_turns
+ 	@@turns_left.shift
+ end
  		
 	def red_on
-		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-		red.on
+		
+	
+	#red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+	#	red.on
 	end	
 	
 	def red_off
-		red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-		red.off
+	#	red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
+	#	red.off
 	end
 			
 
