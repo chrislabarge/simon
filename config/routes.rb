@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root  'game_pages#play'
+	get 'game_pages/home'
+	
 	get 'game_pages/test'
 	get 'game_pages/red'
   get 'game_pages/red_off'
