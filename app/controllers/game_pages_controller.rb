@@ -17,7 +17,7 @@ class GamePagesController < ApplicationController
 
   ####################
 
-<<<<<<< HEAD
+
 	def red
 	
 	end		
@@ -30,9 +30,7 @@ class GamePagesController < ApplicationController
 	
 	def yellow
 	end	
-=======
-	
->>>>>>> modeling-user
+
 
 
 
