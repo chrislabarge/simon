@@ -11,7 +11,7 @@ class GamePagesController < ApplicationController
   
   
   def play
-  		
+  		what  = fork{ exec 'omxplayer', '/pi_stuff/red.mp3' }
   end
 
 
