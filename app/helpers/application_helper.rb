@@ -41,6 +41,25 @@ module ApplicationHelper
 		return @@turns_left 	
 	end
 	
+ def light_and_audio(light_array)
+ 		add = 0 
+ 		
+ 		audio = 'app/assets/' + @@pattern[add] + '.mp3'
+ 		
+ 		
+ 		for i in light_array
+ 			add += 1
+ 			i.on 
+ 			
+ 			what  = fork{ exec 'omxplayer', audio }
+
+ 			sleep(1)
+ 			i.off
+ 			sleep(0.1)
+ 		end 
+ end
+
+
  
  def make_light_array
  		light_array =[]
@@ -58,21 +77,7 @@ module ApplicationHelper
  		end
  	end
  	
- 		add = 0 
- 		
- 		audio = 'app/assets/' + @@pattern[add] + '.mp3'
- 		
- 		
- 		for i in light_array
- 			add += 1
- 			i.on 
- 			
- 			what  = fork{ exec 'omxplayer', audio }
-
- 			sleep(1)
- 			i.off
- 			sleep(0.1)
- 		end 
+ 	light_and_audio(light_array)
  	end 
 		
  
