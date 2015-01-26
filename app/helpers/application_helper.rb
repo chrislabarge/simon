@@ -44,6 +44,8 @@ module ApplicationHelper
  
  def make_light_array
  		light_array =[]
+ 		
+ 	
  	for i in @@pattern 
  		if i == "red" 
  			light_array.push(@@red)
@@ -56,9 +58,16 @@ module ApplicationHelper
  		end
  	end
  	
+ 		add = 0 
+ 		
+ 		audio = 'app/assets/' + @@pattern[add] + '.mp3'
+ 		
+ 		
  		for i in light_array
+ 			add += 1
  			i.on 
- 			what  = fork{ exec 'omxplayer', 'app/assets/red.mp3' }
+ 			
+ 			what  = fork{ exec 'omxplayer', audio }
 
  			sleep(1)
  			i.off
