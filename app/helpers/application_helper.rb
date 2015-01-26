@@ -44,15 +44,17 @@ module ApplicationHelper
  def light_and_audio(light_array)
  		add = 0 
  		
- 		audio = 'app/assets/' + @@pattern[add] + '.mp3'
+ 		
  		
  		
  		for i in light_array
  			add += 1
+ 			audio = 'app/assets/' + @@pattern[add] + '.mp3'
  			i.on 
- 			
  			what  = fork{ exec 'omxplayer', audio }
-
+      
+      
+       
  			sleep(1)
  			i.off
  			sleep(0.1)
