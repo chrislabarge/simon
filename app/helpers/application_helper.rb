@@ -58,9 +58,9 @@ module ApplicationHelper
  	
  		for i in light_array
  			i.on 
- 			sleep 1
+ 			sleep(1)
  			i.off
- 			sleep .1
+ 			sleep(0.1)
  		end 
  	end 
 		
