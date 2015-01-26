@@ -1,31 +1,26 @@
 Rails.application.routes.draw do
 
   root  'game_pages#play'
-	get 'game_pages/home'
 	
-	get 'game_pages/test'
-	get 'game_pages/red'
-  get 'game_pages/red_off'
-  get 'game_pages/green'
-  get 'game_pages/green_off'
-	get 'game_pages/yellow'
-  get 'game_pages/yellow_off'
-  get 'game_pages/blue'
-  get 'game_pages/blue_off'
-  get 'game_pages/rihanna'
+	match '/home', to: 'game_pages#home', via: 'get'
+
+
   
-  
+	match '/red', to: 'game_pages#red', via: 'get'
+	 
+	match '/green', to: 'game_pages#green', via: 'get'
+ 
+	match '/yellow', to: 'game_pages#yellow', via: 'get'
+
+	match '/blue', to: 'game_pages#blue', via: 'get'
+
+
+ 
 
   
   
 
-	resources :users
-
-
-	match 'user/red/:id', to: 'users#red', :as => :red_users, via: 'get' 
-	match 'user/green/:id', to: 'users#green', :as => :green_users, via: 'get' 
-	match 'user/yellow/:id', to: 'users#yellow', :as => :yellow_users, via: 'get'
-  match 'user/blue/:id', to: 'users#blue', :as => :blue_users, via: 'get'
+	
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

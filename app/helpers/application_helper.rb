@@ -5,16 +5,20 @@ module ApplicationHelper
 	 
  @@pattern = []
  @@turns_left = []		
-	
+ 
+ test = []		
  def new_color
  	colors = ["red", "green", "blue", "yellow"]
  	return colors.sample
  end
  
- 
- def set_turns
- 	@@turns_left = @@pattern
+
+ def restart
+ 		@@pattern = []
+	  @@turns_left = []
  end
+ 
+ 
  
  
  def pattern
@@ -27,29 +31,34 @@ module ApplicationHelper
 	
  
  
- def new_pattern
-	@@pattern = ["red"] #eventually it will just be the new_color function 
- end			
+		
  
  def add_new_color
- 	@@pattern.push(new_color)
+ 	if @@turns_left.empty? 	
+ 	
+ 		color = new_color
+ 	
+ 		@@pattern.push(color)
+ 		for i in @@pattern
+ 			@@turns_left.push(i)
+ 		end	
+  else 
+  	nil
+  end 	
  end
  
- def shift_turns
- 	@@turns_left.shift
+ def shift_turns(color)
+ 	if @@turns_left[0] == color
+ 		@@turns_left.shift
+ 	else
+ 		nil
+ 	end
  end
- 		
-	def red_on
-		
-	
-	#red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-	#	red.on
-	end	
-	
-	def red_off
-	#	red =  PiPiper::Pin.new(:pin => 23, :direction => :out)
-	#	red.off
-	end
+ 
+
+
+
+ 
 			
 
  	#	 @red =  PiPiper::Pin.new(:pin => 23, :direction => :out)

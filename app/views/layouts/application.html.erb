@@ -6,9 +6,27 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
 <body>
+<style>
+button{
+	width: 200px;
+	height: 50px;
+}
+</style>
+
+<h3>pattern:<%=pattern%></h3>
+<h4>turns_left:<%=turns_left%></h4>
+
 
 <%= yield %>
 
+<a href="/red"><button>Red</button></a><br><br>
+<a href="/yellow"><button>Yellow</button></a><br><br>
+<a href="green"><button>Green</button></a><br><br>
+<a href="/blue"><button>Blue</button></a><br><br>
+<br><br>
+<a href="<%=root_path%>">home</a>
 </body>
 </html>
