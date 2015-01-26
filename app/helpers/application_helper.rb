@@ -58,7 +58,7 @@ module ApplicationHelper
  	
  		for i in light_array
  			i.on 
- 			
+ 			what  = fork{ exec 'omxplayer', 'app/assets/red.mp3' }
 
  			sleep(1)
  			i.off
