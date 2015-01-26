@@ -42,7 +42,7 @@ module ApplicationHelper
 	end
 	
  def light_and_audio(light_array)
- 		add = 0 
+ 		add = -1 
  		
  		
  		
