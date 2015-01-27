@@ -13,8 +13,30 @@ module ApplicationHelper
  
  @@pattern = []
  @@turns_left = []		
+ @@loop = [@@red,@@blue,@@yellow,@@green]	 	
+ 
+ 	
+ def light_loop
 
+ 	for light in @@loop
+ 		i.on
+ 		sleep 0.1
+ 		i.off
+ 	end
+ end	
 
+ def light_loop_reverse
+		for light in @@loop.reverse
+			i.on
+			sleep 0.1
+			i.off
+		end 
+ end
+ 
+def all_lights
+	5.times do light_loop end
+	5.times do light_loop_reverse end
+end
 
 	
  def new_color
@@ -76,6 +98,8 @@ end
  			light_array.push(@@blue)
  		elsif i == "yellow"
  			light_array.push(@@yellow)
+ 		else 
+ 			all_lights
  		end
  	end
  	
