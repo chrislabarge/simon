@@ -47,7 +47,7 @@ module ApplicationHelper
  			@@add += 1
  			audio = "app/assets/#{@@pattern[@@add]}.mp3"
  			i.on 
- 			what  = fork{ exec 'omxplayer', audio }
+ 			what  = fork{ exec 'mpg123', audio }
       
       
        
