@@ -99,7 +99,7 @@ end
  		elsif i == "yellow"
  			light_array.push(@@yellow)
  		else 
- 			all_lights
+ 			nil
  		end
  	end
  	
@@ -134,7 +134,7 @@ end
  	if @@turns_left[0] == color
  		@@turns_left.shift
  	else
- 		nil
+ 		all_lights
  	end
  end
  
