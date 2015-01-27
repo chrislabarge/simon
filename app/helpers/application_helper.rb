@@ -11,10 +11,8 @@ module ApplicationHelper
  
  
  
-  def restart
- 		@@pattern = []
-	  @@turns_left = []
- end
+ @@pattern = []
+ @@turns_left = []		
 
 
 
@@ -25,7 +23,11 @@ module ApplicationHelper
  end
  
 
-
+ def restart
+ 		@@pattern = []
+	  @@turns_left = []
+ 
+ end
  
  
  
@@ -45,7 +47,7 @@ module ApplicationHelper
  			@@add += 1
  			audio = "app/assets/#{@@pattern[@@add]}.mp3"
  			i.on 
- 			what  = exec 'omxplayer', audio 
+ 			what  = fork{ exec 'omxplayer', audio }
       
       
        
