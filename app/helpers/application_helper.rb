@@ -16,8 +16,7 @@ module ApplicationHelper
 
 
 
- 
- test = []		
+	
  def new_color
  	colors = ["red", "green", "blue", "yellow"]
  	return colors.sample
@@ -42,26 +41,26 @@ module ApplicationHelper
 	end
 	
  def light_and_audio(light_array)
- 		add = -1 
- 		
- 		
- 		
+ 		@@add = -1 
  		
  		for i in light_array
- 			add += 1
- 			audio = 'app/assets/' + @@pattern[add] + '.mp3'
+ 			@@add += 1
+ 			audio = "app/assets/#{@@pattern[@@add]}.mp3"
  			i.on 
  			what  = fork{ exec 'omxplayer', audio }
       
       
        
- 			sleep(1)
+ 			sleep(2)
  			i.off
  			sleep(0.1)
  		end 
  end
 
-
+def add
+ return @@add
+ 
+end
  
  def make_light_array
  		light_array =[]
