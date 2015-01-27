@@ -19,17 +19,17 @@ module ApplicationHelper
  def light_loop
 
  	for light in @@loop
- 		i.on
+ 		light.on
  		sleep 0.1
- 		i.off
+ 		light.off
  	end
  end	
 
  def light_loop_reverse
 		for light in @@loop.reverse
-			i.on
+			light.on
 			sleep 0.1
-			i.off
+			light.off
 		end 
  end
  
