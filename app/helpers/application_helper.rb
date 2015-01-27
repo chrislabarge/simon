@@ -11,8 +11,10 @@ module ApplicationHelper
  
  
  
- @@pattern = []
- @@turns_left = []		
+  def restart
+ 		@@pattern = []
+	  @@turns_left = []
+ end
 
 
 
@@ -23,11 +25,7 @@ module ApplicationHelper
  end
  
 
- def restart
- 		@@pattern = []
-	  @@turns_left = []
- 
- end
+
  
  
  
