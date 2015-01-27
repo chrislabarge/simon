@@ -46,8 +46,9 @@ module ApplicationHelper
  		for i in light_array
  			@@add += 1
  			audio = "app/assets/#{@@pattern[@@add]}.mp3"
- 			i.on 
  			what  = fork{ exec 'mpg123', audio }
+ 			i.on 
+ 			
       
       
        
