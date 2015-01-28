@@ -22,10 +22,12 @@ button{
 
 <%= yield %>
 
+<%unless current_page?("/over")%>
 <a href="/red"><button>Red</button></a><br><br>
 <a href="/yellow"><button>Yellow</button></a><br><br>
 <a href="green"><button>Green</button></a><br><br>
 <a href="/blue"><button>Blue</button></a><br><br>
+<%end%>	
 <br><br>
 <a href="<%=root_path%>">home</a>
 </body>
