@@ -5,6 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+	<% if game_over == true  %>
+ 	 <script type="text/javascript">
+ 	   window.location.href="/over"
+ 	 </script>
+	<% end %>  
 </head>
 
 

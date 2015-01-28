@@ -46,13 +46,16 @@ end
  
 
  def restart
+ 		@@game_over = false
  		@@pattern = []
 	  @@turns_left = []
  
  end
  
  
- 
+ def game_over 
+ 	return @@game_over
+ end
  
  def pattern
  		return @@pattern
@@ -134,7 +137,7 @@ end
  	if @@turns_left[0] == color
  		@@turns_left.shift
  	else
- 		all_lights
+ 		@@game_over = true
  	end
  end
  
