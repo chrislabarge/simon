@@ -13,7 +13,9 @@ class GamePagesController < ApplicationController
   def play
 
   end
-
+	
+	def over
+	end
 
   ####################
 

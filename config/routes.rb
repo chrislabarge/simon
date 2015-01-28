@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 	
 	match '/home', to: 'game_pages#home', via: 'get'
 
-
+	match '/over', to: 'game_pages#over', via: 'get'
   
 	match '/red', to: 'game_pages#red', via: 'get'
 	 
