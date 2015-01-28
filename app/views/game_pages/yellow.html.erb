@@ -2,6 +2,11 @@
 
 
 <%shift_turns('yellow')%>
+<% if game_over == true  %>
+ 	 <script type="text/javascript">
+ 	   window.location.href="/over"
+ 	 </script>
+	<% end %> 
 <% add_new_color %>
 
 
