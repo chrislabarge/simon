@@ -34,6 +34,9 @@ module ApplicationHelper
  end
  
 def all_lights
+	 
+ 	what  = fork{ exec 'mpg123', "app/assets/game_over.mp3" }
+	
 	5.times do light_loop end
 	5.times do light_loop_reverse end
 end
