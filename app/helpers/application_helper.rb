@@ -52,7 +52,7 @@ end
  		@@game_over = false
  		@@pattern = []
 	  @@turns_left = []
- 
+ 		@@time = [0.85,0.88,0.9,1,1.10,1.25,1.5,2]
  end
  
  
@@ -70,7 +70,7 @@ end
 	
  def light_and_audio(light_array)
  		@@add = -1 
- 		
+ 		sleepy = @@time.pop
  		for i in light_array
  			@@add += 1
  			audio = "app/assets/#{@@pattern[@@add]}.mp3"
@@ -80,7 +80,7 @@ end
       
       
        
- 			sleep(2)
+ 			sleep(sleepy)
  			i.off
  			sleep(0.1)
  		end 
