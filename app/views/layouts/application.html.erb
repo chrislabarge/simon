@@ -5,11 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-	<% if game_over == true  %>
- 	 <script type="text/javascript">
- 	   window.location.href="/over"
- 	 </script>
-	<% end %>  
+
 </head>
 
 
@@ -26,6 +22,11 @@ button{
 
 <%= yield %>
 
+	<% if game_over == true  %>
+ 	 <script type="text/javascript">
+ 	   window.location.href="/over"
+ 	 </script>
+	<% end %>  	
 <%unless current_page?("/over")%>
 <a href="/red"><button>Red</button></a><br><br>
 <a href="/yellow"><button>Yellow</button></a><br><br>
@@ -42,6 +43,7 @@ button{
 	<br>
 	<a href="/home" ><button>High Scores</button> </a>
 <%end%>	
+
 
 
 </body>
