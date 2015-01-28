@@ -20,7 +20,7 @@
 			
 			button{
 				width: 200px;
-				height: 50px;
+				height: 80px;
 			}
 		
 		</style>
@@ -36,21 +36,11 @@
 
 		<%= yield %>
 
-		<div class="row">	 	
-			<div class="col-xs-10 center">
-				<%unless current_page?("/over")%>
-					<a href="/red"><button>Red</button></a><br><br>
-					<a href="/yellow"><button>Yellow</button></a><br><br>
-					<a href="green"><button>Green</button></a><br><br>
-					<a href="/blue"><button>Blue</button></a><br><br>
-
-					<h3>pattern:<%=pattern%></h3>	
-					<h4>turns_left:<%=turns_left%></h4>
-					<br><br>
-					<a href="<%=root_path%>">home</a>
-				<%end%>	
-			</div>	
-		</div>
+		
+		<%unless current_page?("/over")%>
+				<%render 'layouts/buttons'%>
+		<%end%>	
+			
 	</div>
 
 </body>
