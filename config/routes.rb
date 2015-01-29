@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'game_pages/over'
+
   get 'game_pages/home'
 
   root  'game_pages#play'
