@@ -1,14 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simon</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1,
+maximum-scale=1.0, user-scalable=0">
+<title>Simon</title>
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<style>
+.center {
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+body{
+margin-top: 10px;
+}
+button{
+width: 200px;
+height: 60px;
+margin-top: 15px;
+}
+</style>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+	    <div class="row">	 	
+	<div class="col-xs-12 center">
+		<a href="/red"><button type="button" class="btn btn-danger btn-lg">Red</button></a>
+		<a href="/yellow"><button type="button" class="btn btn-warning btn-lg">Yellow</button></a>
+		<a href="green"><button type="button" class="btn btn-success btn-lg">Green</button></a>
+		<a href="/blue"><button type="button" class="btn btn-primary btn-lg">Blue</button></a>
+</div>
 </body>
-</html>
