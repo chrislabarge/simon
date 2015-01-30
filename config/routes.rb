@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  root  'game_pages#play'
+  root  'game_pages#home'
 	
-	match '/home', to: 'game_pages#home', via: 'get'
+	match '/play', to: 'game_pages#play', via: 'get'
 
 	match '/over', to: 'game_pages#over', via: 'get'
   
