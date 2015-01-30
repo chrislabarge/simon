@@ -11,6 +11,9 @@ class GamePagesController < ApplicationController
 	def home
 	end
 	 
+	def scores
+	end
+	
 	def over
 	end
 	
