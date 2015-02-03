@@ -1,21 +1,37 @@
 Rails.application.routes.draw do
 
+
   root  'game_pages#home'
 	
-	match '/play', to: 'game_pages#play', via: 'get'
+	get 'play' => 'game_pages#play'
+	
+	#match '/play', to: 'game_pages#play', via: 'get'
 
-	match '/over', to: 'game_pages#over', via: 'get'
+	get 'over' => 'game_pages#over'
+	
+	#match '/over', to: 'game_pages#over', via: 'get'
   
-	match '/red', to: 'game_pages#red', via: 'get'
-	 
-	match '/green', to: 'game_pages#green', via: 'get'
+	get 'red' => 'game_pages#red'
+	
+	#match '/red', to: 'game_pages#red', via: 'get'
+	
+	get 'green' => 'game_pages#green' 
+	
+#	match '/green', to: 'game_pages#green', via: 'get'
  
-	match '/yellow', to: 'game_pages#yellow', via: 'get'
+  get 'yellow' => 'game_pages#yellow'
 
-	match '/blue', to: 'game_pages#blue', via: 'get'
+#	match '/yellow', to: 'game_pages#yellow', via: 'get'
 
+	get 'blue' => 'game_pages#blue'
+	
+#	match '/blue', to: 'game_pages#blue', via: 'get'
 
+	get 'scores' => 'game_pages#scores'
  
+	get 'new_score' => 'game_page#new_score'
+	
+	post 'new_score' => 'game_pages#write_new_score'
 
   
   

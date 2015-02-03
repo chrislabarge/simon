@@ -34,6 +34,16 @@ class GamePagesController < ApplicationController
 	def yellow
 	end	
 
+######################
+
+	def scores
+	end	
+
+	def new_score
+	end
+
+	def write_new_score	
+	end
 
 
 
