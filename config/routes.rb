@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
 	get 'scores' => 'game_pages#scores'
  
-	get 'new_score' => 'game_page#new_score'
+	get 'new_score' => 'game_pages#new_score'
 	
 	post 'new_score' => 'game_pages#write_new_score'
 
