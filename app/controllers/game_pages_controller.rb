@@ -14,6 +14,11 @@ class GamePagesController < ApplicationController
 	def scores
 	end
 	
+	def new_score
+		name = params[:name]
+		
+	end
+	
 	def over
 	end
 	

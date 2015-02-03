@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'new_score' =>'game_pages#new_score'
+
   get 'game_pages/scores'
 
   get 'game_pages/over'
