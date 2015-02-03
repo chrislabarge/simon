@@ -3,16 +3,15 @@ module ApplicationHelper
 	@@high_score_array = []
 	@@high_names = []
 	@@high_scores = []
-
-	
+	@@poop = ["hey","test",1,2,3]
+	@@high_index = 2
 	
 	
 	
 	def test
 		File.open("app/models/high_scores.txt", "w+") do |f|
-			f.puts "chris"
-			f.puts "labarge"
-			f.puts 12
+			 f.puts @@poop
+			
 		end
 	end
 
@@ -39,6 +38,10 @@ module ApplicationHelper
 	def high_scores
 		return @@high_scores
 	end	
+	
+	def high_index
+		@@high_index
+	end
 	
 
 

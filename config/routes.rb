@@ -1,18 +1,16 @@
 Rails.application.routes.draw do
   get 'new_score' =>'game_pages#new_score'
+	
+	post 'new_score' => 'game_pages#write_new_score'
 
-  get 'game_pages/scores'
+  get 'scores' => 'game_pages#scores'
 
   get 'game_pages/over'
 
   get 'game_pages/home'
 
   root  'game_pages#play'
-	get 'game_pages/red'
-  get 'game_pages/red_off'
-  get 'game_pages/green'
-  get 'game_pages/green_off'
-  
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

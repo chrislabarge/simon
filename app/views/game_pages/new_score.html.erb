@@ -7,9 +7,12 @@
 	<%= form_tag(new_score_path) do%>
 		<div class="form-group">
 			<%= label_tag 'name', 'Name'%>
-			<%= text_field_tag 'name', nil, class: 'form-control', required: true,
+			<%= text_field_tag :name, nil, class: 'form-control', required: true,
 					maxlength:30, placeholder: 'Your Name'%>
 		</div>
+	<%= hidden_field_tag(:score, 5) %>
+	<%= hidden_field_tag(:index, high_index) %>		
+	
 	<%= submit_tag "Submit", class:"btn btn-success btn-large"%>
 	<%end%>
 </div>
