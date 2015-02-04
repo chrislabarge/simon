@@ -1,2 +1,28 @@
-<h1>GamePages#scores</h1>
-<p>Find me in app/views/game_pages/scores.html.erb</p>
+<%set_high_scores%>
+   <div class="row">	 	
+	    <div class="col-xs-12">
+      <h1 class="center">High Scores</h1>
+	    </div>
+      <div class="col-xs-12 col-sm-6 col-sm-offset-4">  
+     		  
+       
+       <div class="row"> 
+        <div class="col-xs-8 col-sm-6">
+          <span><h4 style="padding-left:20px">Name</h4></span> 
+         <ol>
+					<%for element in high_names do %>
+						<li><%=element%></li>	
+					<%end%>
+				 </ol>
+        </div>
+        <div class="col-xs-1 col-sm-">
+         <span><h4>Score</h4></span>
+          <div class="score"><% for element in high_scores do%> <%= element%> <%end%> </div> 
+         </div>        
+     </div>
+ </div>
+
+
+
+
+
