@@ -4,7 +4,7 @@ module GamePagesHelper
 @@high_names = []
 @@high_scores = []
 @@poop = ["hey","test",1,2,3]
-@@high_index = 2
+@@high_index = nil
 
 def test
 	File.open("app/models/high_scores.txt", "w+") do |f|
@@ -33,7 +33,14 @@ return @@high_scores
 end	
 
 def high_index
-@@high_index
+	set_high_scores #this is so i can access the high_scores array
+	for i in @@high_scores do
+	 if i < score
+	  return @@high_scores.index(i)
+	 else
+	 	nil
+	 end 
+		
 end	
 
 
