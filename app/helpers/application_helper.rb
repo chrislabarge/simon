@@ -92,7 +92,7 @@ def add
 end
  
  def make_light_array
- 		light_array =[]
+ 		light_array = []
  		
  	
  	for i in @@pattern 
