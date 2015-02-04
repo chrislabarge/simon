@@ -40,6 +40,7 @@ def high_index
 	 else
 	 	nil
 	 end 
+	end 
 		
 end	
 
