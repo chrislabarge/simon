@@ -36,5 +36,8 @@ def high_index
 @@high_index
 end	
 
+def hi
+	score
+end
 
 end

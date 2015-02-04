@@ -145,7 +145,9 @@ end
  end
  
 
-
+def score
+ return	@@pattern.index(@@pattern(last))
+end
 
  
 			
