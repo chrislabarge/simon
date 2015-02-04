@@ -146,7 +146,7 @@ end
  
 
 def score
- return	@@pattern.index(@@pattern(last))
+ return	@@pattern.index(@@pattern.last)
 end
 
  
