@@ -42,7 +42,32 @@ class GamePagesController < ApplicationController
 	def new_score
 	end
 
-	def write_new_score	
+	def write_new_score
+		name = params[:name]
+		score = params[:score]
+		index = params[:index].to_i
+		array = []
+		
+		high_txt = File.open("app/models/high_scores.txt", "r")
+		lines = high_txt.readlines
+		high_txt.close
+		
+		lines.each{ |line| array.push(line.chomp) }
+		
+		array.delete_at(9)
+		
+		array.pop
+		
+		array.insert(index, name)
+		array.insert((10+index), score)
+		
+		
+		File.open("app/models/high_scores.txt", "w+") do |f|
+			 f.puts array
+			
+		end
+		
+		redirect_to scores_path 
 	end
 
 

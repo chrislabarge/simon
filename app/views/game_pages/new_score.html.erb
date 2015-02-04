@@ -1,2 +1,18 @@
-<h1>GamePages#new_score</h1>
-<p>Find me in app/views/game_pages/new_score.html.erb</p>
+
+<div class="row">
+	<h1>New High Score</h1>
+
+	
+	
+	<%= form_tag(new_score_path) do%>
+		<div class="form-group">
+			<%= label_tag 'name', 'Name'%>
+			<%= text_field_tag :name, nil, class: 'form-control', required: true,
+					maxlength:30, placeholder: 'Your Name'%>
+		</div>
+	<%= hidden_field_tag(:score, 5) %>
+	<%= hidden_field_tag(:index, high_index) %>		
+	
+	<%= submit_tag "Submit", class:"btn btn-success btn-large"%>
+	<%end%>
+</div>
