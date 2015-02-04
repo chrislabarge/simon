@@ -36,7 +36,7 @@ def high_index
 	set_high_scores #this is so i can access the high_scores array
 	for i in @@high_scores do
 	 if i.to_i < score
-	  return @@high_scores.index(i.to_i)
+	  return @@high_scores.index(i)
 	 else
 	 	nil
 	 end 
