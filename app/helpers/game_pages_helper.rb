@@ -8,7 +8,7 @@ def high_index
 	 if i.to_i < score
 	  return @high_scores.index(i)
 	 else
-	 	nil
+	 	false
 	 end 
 	end 
 		
