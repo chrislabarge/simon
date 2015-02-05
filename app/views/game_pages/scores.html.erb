@@ -10,14 +10,14 @@
         <div class="col-xs-8 col-sm-6">
           <span><h4 style="padding-left:20px">Name</h4></span> 
          <ol>
-					<%for element in high_names do %>
+					<%for element in @high_names do %>
 						<li><%=element%></li>	
 					<%end%>
 				 </ol>
         </div>
         <div class="col-xs-1 col-sm-">
          <span><h4>Score</h4></span>
-          <div class="score"><% for element in high_scores do%> <%= element%> <%end%> </div> 
+          <div class="score"><% for element in @high_scores do%> <%= element%> <%end%> </div> 
          </div>        
      </div>
  </div>
