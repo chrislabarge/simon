@@ -1,19 +1,7 @@
 class GamePagesController < ApplicationController
   	
   	
-  def set_high_scores
-		high_score_array = []
-		
-		high_txt = File.open("app/models/high_scores.txt", "r")
-		lines = high_txt.readlines
-		high_txt.close
-		
-		lines.each{ |line| @@high_score_array.push(line.chomp) }
-		
-				
-		return nil
-		
-	end
+  
   
  
   
@@ -26,6 +14,20 @@ class GamePagesController < ApplicationController
 	end
 	 
 	def scores
+		@high_score_array = []
+		@high_scores = []
+		@high_names = []	
+	
+	
+  	high_txt = File.open("app/models/high_scores.txt", "r")
+		lines = high_txt.readlines
+		high_txt.close
+		
+		lines.each{ |line| @high_score_array.push(line.chomp) }
+		
+		@high_names = @high_score_array[0..9]
+		@high_scores = @high_score_array[10..19]
+	
 	end
 	
 	def new_score
@@ -59,7 +61,7 @@ class GamePagesController < ApplicationController
 			
 		end
 		
-		redirect_to root_path #this will be changed to the scores_path once everything is good.
+		redirect_to scores_path
 	end
 	
 	
