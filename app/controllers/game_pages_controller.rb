@@ -4,6 +4,26 @@ class GamePagesController < ApplicationController
   
   #######################
 
+def set_high_scores	
+		@high_score_array = []
+		@high_scores = []
+		@high_names = []	
+	
+	
+  	high_txt = File.open("app/models/high_scores.txt", "r")
+		lines = high_txt.readlines
+		high_txt.close
+		
+		lines.each{ |line| @high_score_array.push(line.chomp) }
+		
+		@high_names = @high_score_array[0..9]
+		@high_scores = @high_score_array[10..19]
+	end
+##################	
+
+
+
+
   
   def home
   	
@@ -37,21 +57,6 @@ class GamePagesController < ApplicationController
 
 ######################
 
-	def set_high_scores	
-		@high_score_array = []
-		@high_scores = []
-		@high_names = []	
-	
-	
-  	high_txt = File.open("app/models/high_scores.txt", "r")
-		lines = high_txt.readlines
-		high_txt.close
-		
-		lines.each{ |line| @high_score_array.push(line.chomp) }
-		
-		@high_names = @high_score_array[0..9]
-		@high_scores = @high_score_array[10..19]
-	end
 	
 	
 	
