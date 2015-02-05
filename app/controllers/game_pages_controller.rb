@@ -67,6 +67,7 @@ def set_high_scores
 	end	
 
 	def new_score
+		set_high_scores
 	end
 
 	def write_new_score
