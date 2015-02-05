@@ -66,7 +66,7 @@ class GamePagesController < ApplicationController
 	
 	
 	def scores
-		set_high_score
+		set_high_scores
 	
 	end	
 
