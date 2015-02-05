@@ -17,7 +17,10 @@ def set_high_scores
 		lines.each{ |line| @high_score_array.push(line.chomp) }
 		
 		@high_names = @high_score_array[0..9]
-		@high_scores = @high_score_array[10..19].to_i
+		high_scores = @high_score_array[10..19].to_i
+		for i in high_scores do
+			@high_scores.push(i.to_i)
+		end
 	end
 ##################	
 
