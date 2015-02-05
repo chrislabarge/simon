@@ -9,8 +9,10 @@ def high_index(high_scores)
 	 
 	 if score > i 
 	 		return high_scores.index(i)
-	 else
+	 elsif score < i
 	 		nil
+	 else 
+	 		false
 	 end		
 			
 	end 
