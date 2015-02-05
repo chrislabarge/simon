@@ -46,7 +46,7 @@ class GamePagesController < ApplicationController
 
 ######################
 
-	def scores
+	def set_high_scores	
 		@high_score_array = []
 		@high_scores = []
 		@high_names = []	
@@ -60,6 +60,13 @@ class GamePagesController < ApplicationController
 		
 		@high_names = @high_score_array[0..9]
 		@high_scores = @high_score_array[10..19]
+	end
+	
+	
+	
+	
+	def scores
+		set_high_score
 	
 	end	
 
