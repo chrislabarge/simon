@@ -146,7 +146,7 @@ end
  
 
 def score
- return	(@@pattern.count - 1) 
+ return	(@@pattern.count) - 1
 end
 
  
