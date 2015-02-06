@@ -8,6 +8,7 @@
      		  
        
        <div class="row"> 
+        
         <div class="col-xs-8 col-sm-6">
           <span><h4 style="padding-left:20px">Name</h4></span> 
          <ol>
@@ -16,18 +17,22 @@
 					<%end%>
 				 </ol>
         </div>
+        
         <div class="col-xs-1">
          <span><h4>Score</h4></span>
           <div class="score"><% for element in @high_scores do%> <%= element%> <%end%> </div> 
-         </div>        
-     		
-     
-    	 </div>
+        </div>        
+     	
+     	</div>
+		
 		</div>	
+			
 			<br><br>
+	  
 	  <div class="col-xs-12">
 			<a href="<%=root_path%>"><h2 class="center">Home</h2></a>
 		</div>
+ 
  </div>
 
 
