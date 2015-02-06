@@ -3,20 +3,19 @@ module GamePagesHelper
 
 
 def high_index(high_scores)
+	index = false
 	
 	for i in high_scores do
 	 
 	 
 	 if score > i 
-	 		return high_scores.index(i)
-	 elsif score < i
-	 		nil
+	 		index = high_scores.index(i)
 	 else 
-	 		false
+	 		nil
 	 end		
-			
 	end 
-		
+	
+	return index	
 end	
 
 
