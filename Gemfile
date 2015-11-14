@@ -6,6 +6,7 @@ gem 'rails', '4.2.0'
 
 gem 'pi_piper' 
 
+gem 'debug_inspector'
 
 gem 'execjs'
 # Use sqlite3 as the database for Active Record
